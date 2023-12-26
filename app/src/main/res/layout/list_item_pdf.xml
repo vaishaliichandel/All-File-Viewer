@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clPdfView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:background="@drawable/ic_bg_item"
+    android:elevation="@dimen/_2sdp">
+
+    <ImageView
+        android:id="@+id/ivPdfIcon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:src="@drawable/ic_pdf"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPdfSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvPdfName" />
+
+    <TextView
+        android:id="@+id/tvPdfName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/icMore"
+        app:layout_constraintStart_toEndOf="@+id/ivPdfIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="New Document.Pdf" />
+
+    <TextView
+        android:id="@+id/tvPdfDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@+id/ivPdfIcon"
+        app:layout_constraintStart_toStartOf="@+id/tvPdfName"
+        app:layout_constraintTop_toBottomOf="@+id/tvPdfName"
+        tools:text="18-07-2023" />
+
+    <TextView
+        android:id="@+id/tvParentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/_10sdp"
+        app:drawableStartCompat="@drawable/ic_folder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPdfIcon"
+        app:layout_constraintStart_toStartOf="@+id/tvPdfName"
+        app:layout_constraintTop_toBottomOf="@+id/tvPdfDate"
+        tools:text="18-07-2023" />
+
+    <TextView
+        android:id="@+id/tvPdfSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@+id/tvPdfDate"
+        app:layout_constraintTop_toTopOf="@+id/tvPdfDate"
+        tools:text="425 KB" />
+
+    <com.google.android.material.button.MaterialButton
+        style="?attr/materialIconButtonStyle"
+        android:layout_width="wrap_content"
+        android:id="@+id/ivStar"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:padding="0dp"
+        app:icon="@drawable/ic_filled_star"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:iconTint="@color/yellow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/icMore"
+        style="?attr/materialIconButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PDFReader</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="to_read_your_files_please_allow_pdf_reader_to_access_your_files">To read your files , please allow <b>All File Viewer</b> to access your files</string>
+    <string name="continue_">Continue</string>
+    <string name="pdf_viewer">All File Viewer</string>
+    <string name="later">Later</string>
+    <string name="go_to_set">Go to set</string>
+    <string name="permission_is_required_to_access_all_files">Permission is required to access all files</string>
+    <string name="no_permission">No Permission</string>
+    <string name="all_pdf_viewer">All File Viewer</string>
+    <string name="no_file">"NO File "</string>
+    <string name="no_found">NO %1$s found</string>
+</resources>

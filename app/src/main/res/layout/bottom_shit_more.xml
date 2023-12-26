@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/dragHandle"
+        android:background="@drawable/bg_bottom_shit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivPdfIcon"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:src="@drawable/ic_pdf"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFileLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvFileName" />
+
+    <TextView
+        android:id="@+id/tvFileName"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:singleLine="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/cbStar"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toEndOf="@+id/ivPdfIcon"
+        app:layout_constraintTop_toBottomOf="@+id/dragHandle"
+        tools:text="file name" />
+
+    <TextView
+        android:id="@+id/tvFileLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/_11sdp"
+        android:maxLines="2"
+        app:layout_constraintEnd_toStartOf="@+id/cbStar"
+        app:layout_constraintStart_toStartOf="@+id/tvFileName"
+        app:layout_constraintTop_toBottomOf="@+id/tvFileName"
+        tools:text="file name" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbStar"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:button="@drawable/star_selector"
+        android:minHeight="0dp"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFileLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvFileName" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E1E1E1"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvFileLocation" />
+
+    <TextView
+        android:id="@+id/tvRename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Rename"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cbStar"
+        app:layout_constraintStart_toStartOf="@+id/ivPdfIcon"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:drawableStartCompat="@drawable/ic_text" />
+
+    <TextView
+        android:id="@+id/tvDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_details"
+        app:layout_constraintEnd_toEndOf="@+id/tvRename"
+        app:layout_constraintStart_toStartOf="@+id/ivPdfIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvRename" />
+
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Share"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_share"
+        app:layout_constraintEnd_toEndOf="@+id/tvDetails"
+        app:layout_constraintStart_toStartOf="@+id/ivPdfIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetails" />
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:text="Delete"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvShare"
+        app:layout_constraintStart_toStartOf="@+id/ivPdfIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvShare" />
+</androidx.constraintlayout.widget.ConstraintLayout>
