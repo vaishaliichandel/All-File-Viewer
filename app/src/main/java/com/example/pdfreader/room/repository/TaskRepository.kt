@@ -16,7 +16,7 @@ class TaskRepository(private val taskDao: Dao) {
 
     suspend fun insertData(data: List<FileData>) {
         withContext(Dispatchers.IO) {
-                taskDao.insertAll(data)
+            taskDao.insertAll(data)
         }
     }
 }

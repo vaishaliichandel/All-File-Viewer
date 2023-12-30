@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BottomSheetListe
     companion object {
         private const val STORAGE_PERMISSION_CODE = 23
     }
+
     private lateinit var executor: ExecutorService
     private lateinit var handler: Handler
     private lateinit var viewModel: MainViewModel
@@ -76,7 +77,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BottomSheetListe
 
     private fun onTabSelected(searchList: List<FileData>, color: String) {
         binding.run {
-            tvSize.text = if (searchList.size <= 1) searchList.toSet().size.toString().plus(" Document") else searchList.toSet().size.toString().plus(" Documents")
+            tvSize.text = if (searchList.size <= 1) searchList.toSet().size.toString()
+                .plus(" Document") else searchList.toSet().size.toString().plus(" Documents")
             mainAdapter.addAll(searchList.filter { it.isFav }.toSet() + searchList.toSet())
             llLayout.setBackgroundColor(Color.parseColor(color))
             search.setBackgroundColor(Color.parseColor(color))
